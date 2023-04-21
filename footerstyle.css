@@ -1,0 +1,33 @@
+footer {
+    background-color: #27282c;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #666;
+  }
+  
+  .footer-text {
+    text-align: center;
+  }
+  
+  .footer-text p {
+    font-size: 14px;
+    color: #969494;
+    margin: 0;
+  }

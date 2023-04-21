@@ -1,0 +1,131 @@
+*{
+   margin: 0;
+   padding: 0;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+/**Ссылка на фонт чтобы не приходилось её устанавливать если её на винде/маке нет**/
+.nav{
+  opacity: 80%;
+  background-color: #272727;
+  width: 100%;
+  height: 9vh;
+  /**background-image: url(big_image_1.jpg);**/
+  background-color: #272727;
+  opacity: 90%;
+/**градиент навигационной панели. потыкайте настройки, мб интересно.**/
+}
+  body {/**Считаю что Монстеррат лучшего всего подходит для всего сайта. Поэтому весь боди будет в этом фонте**/
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+.logo{
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-top: 1vh;
+  margin-left: 2vh;
+}
+
+.btn{
+width: 120px;
+height: 50px;
+position: absolute;
+top: 1.5%;
+left: 90%;
+font-weight: 500;
+cursor: pointer;
+border: none;
+border-radius : 50px;
+color: #ffffff;
+background: #333333;
+justify-content: center;
+box-shadow: 5px 5px 10px -2px rgba(255,255,255, 0.2),
+            -10px -10px 10px -1px rgba(0, 0, 0, 0.50);
+            font-family: "Montserrat", sans-serif;
+            transition: 0.2s ease-in-out;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+  box-shadow: 5px 5px 10px -5px rgba(255,255,255, 0.2),
+            -20px -10px 10px -1px rgba(0, 0, 0, 0.50);
+}
+.navMenu {
+  position: absolute; /**Позишн аболют позволяет расположить элементы буквально обозначая их местоположение в пространстве по осям х и у**/
+  top: 5%; /**То есть по оси у оно на 5 процентов близко к самому верху, соответсвенно отдаляется на 95 проц снизу итд.**/
+  left: 60%; /**Кроме процента можно вписать что угодно. px, vh, em, rem и тд.**/
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/**Вообще функция с позишн аболюст универсальная и удобная хуйня. Используйте её, вообще забудете про марджин. Абсолют и паддинг наше всио.**/
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: fit-content;
+  margin-left: 15px;
+  margin-right: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #743ffa;
+}
+
+.navMenu .dot { /** Изначальная точка точки на навигационной панели**/
+  width: 6px;
+  height: 6px;
+  background: #743ffa;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+} 
+
+.navMenu a:nth-child(1):hover ~ .dot { /** Двигается к первому предмету. "Home"**/
+  -webkit-transform: translateX(45px);
+  transform: translateX(45px); /**Движение по оси х и её скорость обазначены трансформ + транзишн**/
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot { /** Также, двигается к след элементу, уже к "About". По факту дальше все одинаково**/
+  -webkit-transform: translateX(145px);
+  transform: translateX(145px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(280px);
+  transform: translateX(280px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(425px);
+  transform: translateX(425px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+  
